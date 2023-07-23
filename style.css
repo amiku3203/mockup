@@ -1,0 +1,306 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+  
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  main {
+    flex-grow: 1;
+    display: flex;
+  }
+
+  .small-section {
+   margin: 10px;
+    flex-basis: 100px;
+    
+    
+     
+    padding: 10px;
+  }
+ 
+  #first{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #second{
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    margin-top: 10px;
+  }
+  .large-sections {
+    flex-grow: 1;
+    display: flex;
+    
+  }
+
+  .large-section {
+    flex-grow: 1;
+     
+    padding: 10px;
+    margin: 5px;
+  }
+ 
+  img{
+    height: 100px;
+    width: 100px;
+  }
+
+  #inside-section2{
+    display:flex;
+  }
+    
+
+  #details  div{
+       margin-top: 10px;
+  }
+ 
+ .bg-grey{
+    color: grey;
+ }
+
+
+
+ .font-size{
+      font-size: 20px;
+ }
+
+ .font-size2{
+    font-size: 15px;
+ }
+ .font-size3{
+    font-size: 10px;
+ }
+  #bank-details{
+      display: flex;
+      flex-direction: column;
+     justify-content: space-between;
+  }
+
+  /* dropdown  */
+  #work-details{
+    background-color: blue ; 
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .RetirmentIncome{
+    color: blue;
+  }
+
+
+  .achieve-goal{
+    margin-left: -83px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .graph-source{
+    display: flex;
+    flex-direction: row;
+    justify-content:  space-evenly;
+  }
+
+
+
+ /* Common styles for the progress bar container */
+ .all{
+  display: flex;
+}
+.circle-wrap {
+  display: grid;
+  grid-template-columns: repeat(1, 160px);
+  grid-gap: 80px;
+  margin-top: 100px;
+  margin-left: 50px;
+  width: 150px;
+  height: 150px;
+  background: #d9d7da;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill-1,
+.circle-wrap .circle .fill-2,
+.circle-wrap .circle .fill-3 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .inside-circle {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  background: white;
+  line-height: 120px;
+  text-align: center;
+  margin-top: 13px;
+  margin-left: 13px;
+  color: white;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+/* color animation */
+
+.mask .fill-1 {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #1ec4bb;
+}
+
+.mask.full-1,
+.circle .fill-1 {
+  animation: fill-1 ease-in-out 3s;
+  transform: rotate(153deg);
+}
+
+@keyframes fill-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(153deg);
+  }
+}
+
+/* 2nd bar */
+
+.mask .fill-2 {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: rgb(30, 204, 227);
+}
+
+.mask.full-2,
+.circle .fill-2 {
+  animation: fill-2 ease-in-out 3s;
+  transform: rotate(117deg);
+}
+
+@keyframes fill-2{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(117deg);
+  }
+}
+
+/* 3rd progress bar */
+.mask .fill-3 {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #23b9ea;
+}
+
+.mask.full-3,
+.circle .fill-3 {
+  animation: fill-3 ease-in-out 3s;
+  transform: rotate(135deg);
+}
+
+@keyframes fill-3{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+ 
+ .btn{
+   margin-left: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   background-color: blue;
+   color: white;
+ }
+
+ .vl {
+  border-left: 6px solid green;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+/* Mobile view */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .small-section {
+    margin: 5px;
+  }
+
+  .large-section {
+    margin: 5px;
+    padding: 5px;
+  }
+}
+
+/* Tablet view */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .small-section {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .large-section {
+    flex-basis: 50%;
+    max-width: 50%;
+    padding: 10px;
+  }
+
+  .large-sections {
+    flex-direction: row;
+  }
+
+  .achieve-goal, .graph-source {
+    flex-direction: row;
+  }
+}
+
+/* Desktop view */
+ 
